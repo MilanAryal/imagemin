@@ -5,9 +5,11 @@
   "description": "Use Imagemin to compress images",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clean && npm run imagemin",
+    "lossy": "npm run clean && npm run imagemin:lossy",
+    "lossless": "npm run clean && npm run imagemin:lossless",
     "clean": "rimraf \"output/*\"",
-    "imagemin": "node index.js",
+    "imagemin:lossy": "node index.js",
+    "imagemin:lossless": "node index.lossless.js",
     "rimraf": "rimraf \"input/*\" \"output/*\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +25,9 @@
   "homepage": "https://github.com/MilanAryal/imagemin#readme",
   "devDependencies": {
     "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.2",
     "rimraf": "^3.0.2"
   }

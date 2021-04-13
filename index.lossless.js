@@ -1,13 +1,13 @@
 const imagemin = require('imagemin')
-const imageminMozjpeg = require('imagemin-mozjpeg')
-const imageminPngquant = require('imagemin-pngquant')
+const imageminJpegtran = require('imagemin-jpegtran')
+const imageminOptipng = require('imagemin-optipng')
 
 ;(async () => {
   const files = await imagemin(['./input/*.{jpeg,jpg,png}'], {
     destination: './output/',
     plugins: [
-      imageminMozjpeg({ quality: 40 }),
-      imageminPngquant({ quality: [0.6, 0.8] }),
+      imageminJpegtran({ progressive: true }),
+      imageminOptipng(),
     ],
   })
 
