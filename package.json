@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "imagemin-template",
+  "version": "1.0.0",
+  "description": "Use Imagemin to compress images",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run clean && npm run imagemin",
+    "clean": "rimraf \"output/*\"",
+    "imagemin": "node index.js",
+    "rimraf": "rimraf \"input/*\" \"output/*\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MilanAryal/imagemin.git"
+  },
+  "author": "Milan Aryal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MilanAryal/imagemin/issues"
+  },
+  "homepage": "https://github.com/MilanAryal/imagemin#readme",
+  "devDependencies": {
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "rimraf": "^3.0.2"
+  }
+}
