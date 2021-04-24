@@ -6,7 +6,7 @@ const imageminPngquant = require('imagemin-pngquant')
   const files = await imagemin(['./input/*.{jpeg,jpg,png}'], {
     destination: './output/',
     plugins: [
-      imageminMozjpeg({ quality: 40 }),
+      imageminMozjpeg({ quality: 80 }),
       imageminPngquant({ quality: [0.6, 0.8] }),
     ],
   })

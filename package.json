@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MilanAryal/imagemin.git"
+    "url": "git+https://github.com/MilanAryal/imagemin-template.git"
   },
   "author": "Milan Aryal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MilanAryal/imagemin/issues"
+    "url": "https://github.com/MilanAryal/imagemin-template/issues"
   },
-  "homepage": "https://github.com/MilanAryal/imagemin#readme",
-  "devDependencies": {
+  "homepage": "https://github.com/MilanAryal/imagemin-template#readme",
+  "dependencies": {
     "imagemin": "^7.0.1",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
