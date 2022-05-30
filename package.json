@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/MilanAryal/imagemin-template#readme",
   "dependencies": {
-    "imagemin": "^7.0.1",
+    "imagemin": "^8.0.1",
     "imagemin-jpegtran": "^7.0.0",
-    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.2",
     "rimraf": "^3.0.2"
