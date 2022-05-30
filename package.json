@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Use Imagemin to compress images",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "lossy": "npm run clean && npm run imagemin:lossy",
     "lossless": "npm run clean && npm run imagemin:lossless",
@@ -25,6 +26,8 @@
   "homepage": "https://github.com/MilanAryal/imagemin-template#readme",
   "dependencies": {
     "imagemin": "^8.0.1",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",

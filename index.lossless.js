@@ -1,16 +1,16 @@
-const imagemin = require('imagemin')
-const imageminJpegtran = require('imagemin-jpegtran')
-const imageminOptipng = require('imagemin-optipng')
+import imagemin from 'imagemin';
+import imageminJpegtran from 'imagemin-jpegtran';
+import imageminOptipng from 'imagemin-optipng';
+import imageminGifsicle from 'imagemin-gifsicle';
 
-;(async () => {
-  const files = await imagemin(['./input/*.{jpeg,jpg,png}'], {
-    destination: './output/',
-    plugins: [
-      imageminJpegtran({ progressive: true }),
-      imageminOptipng(),
-    ],
-  })
+const files = await imagemin(['./input/*.{jpeg,jpg,png,gif}'], {
+	destination: './output/',
+	plugins: [
+    imageminJpegtran({ progressive: true }),
+    imageminOptipng(),
+    imageminGifsicle(),
+  ],
+});
 
-  console.log(files)
-  //=> [{data: <Buffer 89 50 4e …>, destinationPath: 'build/images/foo.jpg'}, …]
-})()
+console.log(files);
+//=> [{data: <Buffer 89 50 4e …>, destinationPath: 'build/images/foo.jpg'}, …]
